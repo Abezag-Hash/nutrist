@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Blinkit Analyzer",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "contextMenus"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.blinkit.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
